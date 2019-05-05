@@ -23,7 +23,7 @@ public class JenkinsHelper {
         try {
             System.out.println(js.getJobXml(name));
             //System.out.println(js.getJob(name).);
-            //System.out.println(js.getJob(name).getFileFromWorkspace("target/otcplatform.war"));
+            System.out.println(js.getJob(name).getFileFromWorkspace("target/otcplatform.war"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -69,6 +69,7 @@ public class JenkinsHelper {
         //jP.getDefaultXML("onceas-ali01-default-pipeline02-20190315103425");
 
         //System.out.println(jP.readXML(jP.getPath()+"default.ftl"));
-        jP.createJob("test",jP.readXML(jP.getPath()+ "default.ftl"));
+        //jP.createJob("test",jP.readXML(jP.getPath()+ "default.ftl"));
+        jP.getDefaultXML("test");
     }
 }
